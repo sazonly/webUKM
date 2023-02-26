@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pendaftaran UKM</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="assets/theme.css" rel="stylesheet" />
+  <link href="assets/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+<script type="text/javascript">
+  function validasi() {
+    var nama = document.getElementById("nama").value;
+    var nim = document.getElementById("nim").value;
+    var email = document.getElementById("email").value;
+    var telepon = document.getElementById("telepon").value;
+    var jurusan = document.getElementById("jurusan").value;
+    var ukm = document.getElementById("ukm").value;
+    let hari = [];
+    let checkboxes = document.getElementsByName('hari[]');
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        hari.push(checkboxes[i].value);
+      }
+    }
+    let jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked').value;
+    if (nama != "" && nim != "" && email != "" && telepon != "" && jurusan != "" && ukm != "" && hari != "") {
+      alert('Anda berhasil mendaftar! Berikut adalah data yang Anda masukkan : ' +
+        "\n" + 'Nama : ' + nama +
+        "\n" + 'NIM : ' + nim +
+        "\n" + 'Email : ' + email +
+        "\n" + 'No Telp : ' + telepon +
+        "\n" + 'Jenis Kelamin : ' + jenisKelamin +
+        "\n" + 'Jurusan : ' + jurusan +
+        "\n" + 'Jenis UKM : ' + ukm +
+        "\n" + 'Hari Kegiatan : ' + hari);
+    } else {
+      alert('Anda harus mengisi data dengan lengkap !');
+    }
+  }
+</script>
+
+<body>
+  <main class="main" id="top">
+    <nav class="navbar navbar-expand-lg fixed-top py-3 backdrop" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#">
+          <img class="d-inline-block align-top img-fluid" src="assets/image/unpam.png" alt="" width="50" />
+          <span class="text-light fs-4 ps-2">Universitas Pamulang</span></a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
+            <li class="nav-item"><a class="nav-link text-600" aria-current="page" href="index.html">Profil UKM</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Pendaftaran</a></li>
+            <li class="nav-item"><a class="nav-link text-600" href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </main>
+  <div class="container mt-8 mb-6 position-relative">
+    <form name="formPendaftaran" action="#" method="post" onSubmit="validasi()">
+      <div class="form-group">
+        <label>Nama</label>
+        <input type="text" name="nama" id="nama" placeholder="Nama lengkap" class="form-control" required maxlength="40"
+          minlength="3">
+      </div>
+      <div class="form-group">
+        <label>NIM</label>
+        <input type="text" name="nim" id="nim" placeholder="Nomor Induk Mahasiswa" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" id="email" placeholder="Email Aktif" class="form-control">
+        <small id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+      </div>
+      <div class="form-group">
+        <label>No Telepon</label>
+        <input type="telepon" name="telepon" id="telepon" placeholder="No Telepon Aktif" class="form-control">
+        <small id="telpHelp" class="form-text text-muted">No Telepon Akan Digunakan Untuk Mengirimkan Notifikasi via SMS
+          atau WhatsApp.</small>
+      </div>
+      <div class="form-group">
+        <label>Jenis Kelamin</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="jenisKelamin" id="laki-laki" value="laki-laki">
+          <label class="form-check-label" for="laki-laki">
+            Laki-laki
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="jenisKelamin" id="perempuan" value="perempuan">
+          <label class="form-check-label" for="perempuan">
+            Perempuan
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Jurusan</label>
+        <select name="jurusan" id="jurusan" class="form-control py-0" style="color : grey;">
+          <option value="">Pilih Jurusan</option>
+          <option value="D3 - Sekretari">D3 - Sekretari</option>
+          <option value="D3 - Akuntansi">D3 - Akuntansi</option>
+          <option value="D4 - Akuntansi Perpajakan">D4 - Akuntansi Perpajakan</option>
+          <option value="S1 - Teknik Informatika">S1 - Teknik Informatika</option>
+          <option value="S1 - Teknik Industri">S1 - Teknik Industri</option>
+          <option value="S1 - Teknik Kimia">S1 - Teknik Kimia</option>
+          <option value="S1 - Teknik Elektro">S1 - Teknik Elektro</option>
+          <option value="S1 - Teknik Mesin">S1 - Teknik Mesin</option>
+          <option value="S1 - Sastra Indonesia">S1 - Sastra Indonesia</option>
+          <option value="S1 - Sastra Inggris">S1 - Sastra Inggris</option>
+          <option value="S1 - Ilmu Hukum">S1 - Ilmu Hukum</option>
+          <option value="S1 - Pendidikan Pancasila dan Kewarganegaraan">S1 - Pendidikan Pancasila dan Kewarganegaraan
+          </option>
+          <option value="S1 - Pendidikan Ekonomi">S1 - Pendidikan Ekonomi</option>
+          <option value="S1 - Akuntansi">S1 - Akuntansi</option>
+          <option value="S1 - Manajemen">S1 - Manajemen</option>
+          <option value="S1 - Matematika">S1 - Matematika</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Jenis UKM</label>
+        <select name="ukm" id="ukm" class="form-control py-0" style="color : grey;">
+          <option value="">Pilih UKM yang akan didaftar</option>
+          <option value="Mahasiswa Pecinta Alam (MAPALA)">Mahasiswa Pecinta Alam (MAPALA)</option>
+          <option value="Tari Tradisional">Tari Tradisional</option>
+          <option value="Paduan Suara">Paduan Suara</option>
+          <option value="Olahraga - Futsal">Olahraga - Futsal</option>
+          <option value="Olahraga - Basket">Olahraga - Basket</option>
+          <option value="Olahraga - Tenis Meja">Olahraga - Tenis Meja</option>
+          <option value="Olahraga - Bola Voli">Olahraga - Bola Voli</option>
+          <option value="Olahraga - Catur">Olahraga - Catur</option>
+          <option value="Olahraga - Bulu Tangkis">Olahraga - Bulu Tangkis</option>
+          <option value="Pramuka">Pramuka</option>
+          <option value="Pencak Silat">Pencak Silat</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Hari Kegiatan</label>
+        <div class="form-check">
+          <input class="form-check-input" name="hari[]" type="checkbox" value="senin">
+          <label class="form-check-label" for="senin">
+            Senin
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="hari[]" type="checkbox" value="selasa">
+          <label class="form-check-label" for="selasa">
+            Selasa
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="hari[]" type="checkbox" value="rabu">
+          <label class="form-check-label" for="rabu">
+            Rabu
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="hari[]" type="checkbox" value="kamis">
+          <label class="form-check-label" for="kamis">
+            Kamis
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="hari[]" type="checkbox" value="jumat">
+          <label class="form-check-label" for="jumat">
+            Jumat
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="hari[]" type="checkbox" value="sabtu">
+          <label class="form-check-label" for="sabtu">
+            Sabtu
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-warning">Daftar</button>
+      <a href="index.html" class="btn btn-danger">Batal</a>
+    </form>
+  </div>
+</body>
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <img src="assets/image/logo unpam.png">
+    <h3>Universitas Pamulang</h3>
+
+    <p class="footer-company-name">&copy;2022 Hak Cipta, Universitas Pamulang</p>
+    <br>
+    <p class="footer-company-name">An Nisa Dira (201011400378) - 05TPLP006</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><strong>Kampus Pusat</strong></p>
+      <p><span>Jl. Surya Kencana No.1, Pamulang Bar., Kota Tangerang Selatan, Banten 15417</span></p>
+    </div>
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><strong>Kampus Viktor</strong></p>
+      <p><span>Jl. Puspitek, Buaran, Kota Tangerang Selatan, Banten 15310</span></p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>(021) 7412566</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:info@unpam.ac.id">info@unpam.ac.id</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>Sosial Media</span>
+    </p>
+    <div class="footer-icons">
+      <a href="https://id-id.facebook.com/groups/1799334083690670/"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/my_unpam"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.instagram.com/pmb.unpam/?hl=id"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/school/universitas-pamulang/?originalSubdomain=id"><i
+          class="fa fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@sasmitajayagroup3932"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+</html>

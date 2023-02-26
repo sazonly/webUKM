@@ -1,0 +1,245 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.card {
+    align-items: center;
+    width: 100%;
+    height: auto;
+    grid-column: span 3;
+    margin: 10px 0;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+  }
+  footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color:  #091e40;
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 25px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 0px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:12px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 10px 50px;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+	margin: 0 50px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 18px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right:3px;
+	margin-bottom: 5px;
+}
+.contact4 {
+ 
+	color: #8d97ad;
+  font-weight: 300;
+}
+
+.contact4 h1, .contact4 h2, .contact4 h3, .contact4 h4, .contact4 h5, .contact4 h6 {
+  color: #3e4555;
+}
+
+.contact4 .font-weight-medium {
+	font-weight: 500;
+}
+
+.contact4 .form-control {
+  background: transparent;
+  border: 2px solid grey;
+}
+
+.contact4 .form-control:focus {
+  border-color: #ffffff;
+}
+
+.contact4 input::-webkit-input-placeholder,
+.contact4 textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact4 input:-ms-input-placeholder,
+.contact4 textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact4 input::placeholder,
+.contact4 textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact4 .right-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.contact4.bg-info {
+    background-color: white !important;
+}
+
+.contact4 .text-inverse {
+    color: #3e4555 !important;
+}
+
+@media (min-width: 992px) {
+	.contact4 .contact-box {
+    padding: 80px 105px 80px 60px;
+	}
+}
+
+@media (max-width: 767px) {
+	.contact4 .contact-box {
+    padding-left: 15px;
+    padding-right: 15px;
+	}
+}
+
+@media (max-width: 1023px) {
+	.contact4 .right-image {
+			position: relative;
+			bottom: -95px;
+	}
+}
+ 
